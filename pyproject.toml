@@ -15,6 +15,7 @@ pytest = "^8.3.3"
 pytest-cov = "^6.0.0"
 taskipy = "^1.14.0"
 ignr = "^2.2"
+gh = "^0.0.4"
 
 [tool.taskipy.tasks]
 lint = 'ruff check . && ruff check . --diff'
