@@ -39,9 +39,7 @@ def read_users():
     return {'users': fakedb}
 
 
-@app.get(
-    '/users/{user_id}', response_model=PublicSchema, status_code=HTTPStatus.OK
-)
+@app.get('/users/{user_id}', response_model=PublicSchema, status_code=HTTPStatus.OK)
 @app.get('/users/{user_id}', response_model=PublicSchema)
 def get_user_from_id(user_id: int):
     if user_id > len(fakedb) or user_id < 1:
