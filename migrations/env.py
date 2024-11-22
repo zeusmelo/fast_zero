@@ -12,7 +12,7 @@ from fast_zero.models import table_registry
 # access to the values within the .ini file in use.
 #passei o banco de dados 
 config = context.config
-config.set_main_option('sqalchemy.url', Settings().DATABASE_URL)
+config.set_main_option('sqlalchemy.url', Settings().DATABASE_URL)
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
 if config.config_file_name is not None:
