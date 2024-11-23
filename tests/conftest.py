@@ -1,7 +1,7 @@
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, context
 
 from fast_zero.app import app
 from fast_zero.models import table_registry
@@ -22,3 +22,4 @@ def session():
         yield session
 
     table_registry.metadata.drop_all(engine)
+
